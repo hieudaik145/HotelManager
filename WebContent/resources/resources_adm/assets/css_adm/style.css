@@ -1,0 +1,176 @@
+.form-search{
+	margin-top: -35px;
+	color: black;
+}
+
+/* css booking  */
+
+.booking{
+	width:80%;
+	padding-left: 15px;
+}
+.step-booking{
+	text-align: center;
+}
+.step-circle{
+	height: 50px;
+    width: 50px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 49px;
+}
+
+
+.hotel-dropdown{
+	display: none;
+}
+#modals{
+	    width: 70% !important;
+    margin: 0px auto !important;
+}
+.dropdown-menu {
+	width: 95%;
+	height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
+    padding-left: 15px;
+}
+.tenks{
+	    color: #3C4858;
+    text-decoration: none;
+      font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+       font-size: 15px;
+    line-height: 1.5em;
+}
+
+.tenks:hover {
+	color: #9124a3;
+	cursor: pointer;
+}
+
+.tenks-p{
+	    color: #3C4858;
+    text-decoration: none;
+      font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+       font-size: 15px;
+    line-height: 1.5em;
+}
+.tenks-p:hover {
+	color: #9124a3;
+	cursor: pointer;
+}
+/*chon loai phong */
+.loaip{
+	    color: #3C4858;
+    text-decoration: none;
+      font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+       font-size: 15px;
+    line-height: 1.5em;
+}
+.loaip:hover{
+	color: #9124a3;
+	cursor: pointer;
+}
+/*end chon loai phong*/
+/*css chon chuc vu*/
+.cvu{
+	    color: #3C4858;
+    text-decoration: none;
+      font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+       font-size: 15px;
+    line-height: 1.5em;
+}
+.cvu:hover{
+	color: #9124a3;
+	cursor: pointer;
+}
+/*end chuc vu*/
+/* css tinh trang*/
+.ttrang{
+		    color: #3C4858;
+    text-decoration: none;
+      font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+       font-size: 15px;
+    line-height: 1.5em;
+}
+.ttrang:hover{
+		color: #9124a3;
+	cursor: pointer;
+}
+/*end css tinh trang*/
+.btn-booking{
+	position: relative;
+    left: 46%;
+    top: 130%;
+    margin-right: 20%;
+}
+
+/* end css  */
+
+/* css cotainer-hotel index */
+.hotel-cotent{
+	min-height: 500px;
+    margin-top: 8.6%;	
+	
+}
+
+.strongspan{
+	font-size: 12px !important;
+}
+.btntim{
+    margin-top: 12%;
+  
+}
+.inputcus{
+	border: 1px solid #bbbbbb !important;
+	background: #fff;
+    color: #707070;
+}
+
+.inputcus:focus{
+	color: #000;
+	border: 1px solid #000 !important;
+}
+/* end css container-hotel index */
+
+/* banner css */
+
+.bn-search{
+	width: 80%;
+    margin: 0px auto;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    
+	
+}
+.bn-search:focus {
+	color: white !;
+}
+/* end banner css */
+.text-loaiphong{
+	 display: block;
+    width: 90px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.cv{
+	    color: #3C4858;
+    text-decoration: none;
+      font-weight: 700;
+    font-family: "Roboto Slab", "Times New Roman", serif;
+       font-size: 15px;
+    line-height: 1.5em;
+}
+.cv:hover{
+	color: #9124a3;
+	cursor: pointer;
+}

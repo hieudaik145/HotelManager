@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts 
+Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+<struts-config>
+	<form-beans>
+		<form-bean name="phongForm" type="form.PhongForm"></form-bean>
+		<form-bean name="danhSachPhongForm" type="form.DanhSachPhongForm"></form-bean>
+		<form-bean name="loaiPhongForm" type="form.LoaiPhongForm"></form-bean>
+		<form-bean name="danhSachLoaiPhongForm" type="form.DanhSachLoaiPhongForm"></form-bean>
+		<form-bean name="danhSachBookingForm" type="form.DanhSachBookingForm"></form-bean>
+		<form-bean name="bookingDetailForm" type="form.BookingDetailForm"></form-bean>
+		<form-bean name="bookingForm" type="form.BookingForm"></form-bean>
+		<form-bean name="chiTietLoaiPhongForm" type="form.ChiTietLoaiPhongForm"></form-bean>
+		<form-bean name="doanhThuForm" type="form.DoanhThuForm"></form-bean>
+		<form-bean name="danhSachDoanhThuForm" type="form.DanhSachDoanhThuForm"> </form-bean>
+		<form-bean name="trangChuForm" type="form.TrangChuForm"></form-bean>
+		<form-bean name="xuatFileForm" type="form.XuatFileForm"></form-bean>
+		
+		<form-bean name="danhSachLienHeForm" type="form.DanhSachLienHeForm"></form-bean>
+		
+		
+		<form-bean name="danhSachNhanVienForm" type="form.DanhSachNhanVienForm"></form-bean>
+		<form-bean name="nhanVienForm" type="form.NhanVienForm"></form-bean>
+		<form-bean name="danhSachChucVuForm" type="form.DanhSachChucVuForm"></form-bean>
+		<form-bean name="chucVuForm" type="form.ChucVuForm"></form-bean>
+		
+		<form-bean name="LienHeForm" type="form.LienHeForm"></form-bean>
+		<form-bean name="nguoiDungForm" type="form.NguoiDungForm" />
+	</form-beans>
+	<action-mappings>
+		<action path="/danh-sach-phong" name="danhSachPhongForm" scope="request" type="action.DanhSachPhongAction">
+			<forward name="danhSachPhong" path="/manager-room.jsp" />
+		</action>
+		
+		<action path="/delete-phong" name="danhSachPhongForm" scope="request" type="action.XoaPhongAction">
+		
+			<forward name="delete-success" path="/danh-sach-phong.do"></forward>
+			<forward name="delete-fail" path="/danh-sach-phong.do"></forward>
+		</action>
+		<action path="/them-moi-phong" name="phongForm" scope="request" type="action.ThemPhongAction">
+			<forward name="themMoi" path="/"></forward>
+		</action>
+		
+		<action path="/chinh-sua-phong" name="phongForm" scope="request" type="action.ChinhSuaPhongAction">
+			<forward name="success" path="/"></forward>
+		</action>
+		<action path="/danh-sach-loai-phong" name="danhSachLoaiPhongForm" 
+		scope="request" type="action.DanhSachLoaiPhongAction">
+			<forward name="danhSachLoaiPhong" path="/DSLoaiPhong.jsp"></forward>
+		</action>
+		<action path="/delete-loaiphong" name="loaiPhongForm" scope="request" type="action.DeleteLoaiPhongAction">
+			<forward name="success" path="/"></forward>
+		</action>
+		<action path="/chinhsua-loaiphong" name="loaiPhongForm" scope="request" type="action.ChinhSuaLoaiPhongAction">
+			<forward name="success" path="/"></forward>
+		</action>
+		<action path="/themmoi-loaiphong" name="loaiPhongForm" scope="request" type="action.ThemLoaiPhongAction">
+			<forward name="success" path="/"></forward>
+		</action>
+		
+		<action path="/danh-sach-booking" name="danhSachBookingForm" scope="request" type="action.DanhSachBookingAction">
+			<forward name="danhSachBooking" path="/danhsachbooking.jsp"></forward>
+			<forward name="danhSachCheckIn" path="/danhsachcheckin.jsp"></forward>
+			<forward name="searchBooking" path="/danhsachbooking.jsp"></forward>
+			<forward name="searchCheckIn" path="/danhsachcheckin.jsp"></forward>
+		</action>
+		<action path="/chi-tiet-booking" name ="bookingDetailForm" scope="request" type="action.ChiTietBookingAction">
+			<forward name="chiTietBooking" path="/bookingdetail.jsp"></forward>
+		</action>
+		<action path="/update-checkin" name="danhSachBookingForm" scope="request" type="action.UpdateCheckInBookingAction">
+			<forward name="success" path="/"></forward>
+		</action>
+		
+		<action path="/xoa-booking" name="danhSachBookingForm" scope="request" type="action.XoaBookingAction">
+			<forward name="success" path="/"></forward>
+			
+		</action>
+		
+		<action path="/booking-step1" name = "bookingForm" scope="session" type="action.BookingStep1Action">
+			<forward name="booking-step1" path="/booking_step1.jsp"> </forward>
+		</action>
+			<action path="/booking-step2" name = "bookingForm" scope="session" type="action.BookingStep2Action">
+			<forward name="booking-step2" path="/booking_step2.jsp"> </forward>
+			<forward name="booking-step1" path="/booking-step1.do"></forward>
+		</action>
+		<action path="/booking-step3" name = "bookingForm" scope="session" type="action.BookingStep3Action">
+			<forward name="booking-step3" path="/booking_step3.jsp"> </forward>
+		</action>
+		<action path="/booking-step4" name = "bookingForm" scope="session" type="action.BookingStep4Action">
+			<forward name="booking-step4" path="/booking_step4.jsp"> </forward>
+		</action>
+		
+		<action path="/chi-tiet-loai-phong" name="chiTietLoaiPhongForm" type="action.ChiTietLoaiPhongAction" scope="request">
+			<forward name="success" path="/"></forward>
+		</action>
+		<action path="/check-out" name="doanhThuForm" type="action.CheckOutAction" scope="request">
+			<forward name="success" path="/"></forward>
+		</action>
+		<action path="/danh-sach-doanh-thu" name ="danhSachDoanhThuForm"  scope="request" type="action.DanhSachDoanhThuAction" >
+			<forward name="dsDoanhThu" path="/danhsachdoanhthu.jsp"></forward>
+		</action>
+		
+		<action path="/trang-chu" name="trangChuForm" scope="request" type="action.TrangChuAction">
+			<forward name="trangchu" path="/home.jsp"></forward>
+		</action>
+		
+		<action path="/xuat-file" name="xuatFileForm" scope="request" type="action.XuatFileAction">
+			<forward name="xuatfile" path="/"></forward>
+		</action>
+		
+			<!-- Nhan Vien -->
+		<action path="/danh-sach-nhanvien" name = "danhSachNhanVienForm" scope="request" type="action.DanhSachNhanVienAction">
+			<forward name="dsNhanVien" path="/manager_employee.jsp"></forward>
+		</action>
+		<action path="/them-nhanvien" name="nhanVienForm" scope="request" type="action.ThemNhanVienAction">
+			<forward name="themSuccess" path="/danh-sach-nhanvien.do"></forward>
+		</action>
+		<action path="/sua-nhanvien" name="nhanVienForm" scope="request" type="action.SuaNhanVienAction">
+			<forward name="suaSuccess" path="/danh-sach-nhanvien.do"></forward>
+		</action>
+		<action path="/xoa-nhanvien" name="danhSachNhanVienForm" scope="request" type="action.XoaNhanVienAction">
+			<forward name="xoaNV" path="/"></forward>
+		</action>
+		
+		<!-- Chuc Vu -->
+		<action path="/danh-sach-chucvu" name="danhSachChucVuForm" scope="request" type="action.DanhSachChucVuAction">
+			<forward name="dsChucVu" path="/DSChucVu.jsp"></forward>
+		</action>
+		<action path="/them-chucvu" name="chucVuForm" scope="request" type="action.ThemChucVuAction">
+			<forward name="themCVxong" path="/"></forward>
+		</action>
+		<action path="/sua-chucvu" name="chucVuForm" scope="request" type="action.SuaChucVuAction">
+			<forward name="suaCVxong" path="/"></forward>
+		</action>
+		<action path="/xoa-chucvu" name="chucVuForm" scope="request" type="action.XoaChucVuAction">
+			<forward name="xoaCVxong" path="/"></forward>
+		</action>
+				
+		<action name="nguoiDungForm" path="/dangnhap" scope="session" type="action.NguoiDungAction">
+			<forward name="thanhCong" path="/index_adm.jsp" />
+			<forward name="thatBai" path="/login_adm.jsp" />
+		</action>
+		<action path="/log-out" scope="session" type="action.LogOutAction">
+			<forward name="thanhCong" path="/login_adm.jsp" />
+		</action>
+		<action path="/lienhe" name="LienHeForm" scope="request" type="action.LienHeAction">
+			<forward name="themxong" path="/contactus.jsp"></forward>
+			<forward name="them" path="/contactus.jsp"></forward>
+			<forward name="themerror" path="/contactus.jsp"></forward>
+		</action>
+		
+		<action path="/danh-sach-lienhe" name="danhSachLienHeForm" scope="request" type="action.DanhSachLienHeAction">
+			<forward name="dsLienHe" path="/lienhe_adm.jsp"></forward>
+		</action>
+	</action-mappings>
+	<message-resources parameter="action.ApplicationResources" />
+	
+</struts-config>
